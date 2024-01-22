@@ -9,23 +9,19 @@ Nova Busy Resource Field is a Laravel Nova field that allows you to see if a res
 
 ## Installation
 
-For install this package, in your composer.json add the repository:
+For install this package, in your `composer.json` add the repository:
 
-```json
-"the-3labs-team/nova-busy-resource-field": "^0.0",
-{
-"type": "vcs",
-"url": "https://github.com/The-3Labs-Team/nova-busy-resource-field.git"
-}
+```bash
+composer require the-3labs-team/nova-busy-resource-field
 ```
 
-Publish the migration file:
+You need to publish the migration file:
 
 ```bash
   php artisan vendor:publish --tag=nova-busy-resource-field-migrations
 ```
 
-Publish the config file:
+Also, you can publish the config file:
 
 ```bash
   php artisan vendor:publish --tag=nova-busy-resource-field-config
