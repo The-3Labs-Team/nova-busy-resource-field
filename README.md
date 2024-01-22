@@ -39,13 +39,18 @@ composer require the-3labs-team/nova-busy-resource-field
 You need to publish the migration file:
 
 ```bash
-  php artisan vendor:publish --tag=nova-busy-resource-field-migrations
+php artisan vendor:publish --tag=nova-busy-resource-field-migrations
+```
+
+Remember to launch the migrations:
+```bash
+php artisan migrate
 ```
 
 Also, you can publish the config file:
 
 ```bash
-  php artisan vendor:publish --tag=nova-busy-resource-field-config
+php artisan vendor:publish --tag=nova-busy-resource-field-config
 ```
 
 ## Usage
@@ -73,7 +78,7 @@ Then, in your Nova resource, you can add the field:
         return [
             // ...
             
-            NovaBusyResourceField::make('Busy')->withMeta([
+            NovaBusyResourceField::make('')->withMeta([
                 'saveEvery' => 30000 // In milliseconds
             ]),
             
