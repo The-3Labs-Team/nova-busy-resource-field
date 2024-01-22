@@ -73,7 +73,7 @@ Then, in your Nova resource, you can add the field:
         return [
             // ...
             
-            NovaBusyResourceField::make('Busy')->withMeta([
+            NovaBusyResourceField::make('')->withMeta([
                 'saveEvery' => 30000 // In milliseconds
             ]),
             
