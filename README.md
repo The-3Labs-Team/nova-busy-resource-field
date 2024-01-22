@@ -3,9 +3,25 @@
     alt="Logo Nova Busy Resource Field by The3LabsTeam">
 </p>
 
-# Nova Busy Resource Field
+# Laravel Nova Busy Resource Field
 
-Nova Busy Resource Field is a Laravel Nova field that allows you to see if a resource is busy by another user.
+Have you ever dreamed of having a mechanism in Laravel Nova that would allow you to know if a resource is occupied by
+another user?
+
+Introducing **Nova Resource Busy Field**, the first package for Laravel Nova that lets you know if a resource is
+occupied by another user.
+
+From the secret labs of The3LabsTeam this is a completely opensource package designed to make life easier for those
+using Laravel Nova as a multi-user CMS.
+
+🌟 Here are some great features:
+
+- It is model-agnostic, you can decide which resource will be considered "occupiable"
+- Fully configurable, you can choose the threshold timeout and old logs to be deleted
+- It is native to Laravel Nova, there is only one migration to launch
+- It is fully reversible, no Laravel Nova models and/or views are touched
+- Lets you know from the index of a resource if it is occupied
+- Receive an alert if you enter an edit of a busy resource
 
 ## Installation
 
