@@ -42,6 +42,11 @@ You need to publish the migration file:
   php artisan vendor:publish --tag=nova-busy-resource-field-migrations
 ```
 
+Remember to launch the migrations:
+```bash
+    php artisan migrate
+```
+
 Also, you can publish the config file:
 
 ```bash
