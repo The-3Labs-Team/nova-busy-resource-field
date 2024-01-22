@@ -11,6 +11,11 @@ another user?
 Introducing **Nova Resource Busy Field**, the first package for Laravel Nova that lets you know if a resource is
 occupied by another user.
 
+<p align="center">
+    <img src="https://github.com/the-3labs-team/nova-busy-resource-field/raw/HEAD/art/demo.gif" width="100%" 
+    alt="Demo Nova Busy Resource Field by The3LabsTeam">
+</p>
+
 From the secret labs of The3LabsTeam this is a completely opensource package designed to make life easier for those
 using Laravel Nova as a multi-user CMS.
 
