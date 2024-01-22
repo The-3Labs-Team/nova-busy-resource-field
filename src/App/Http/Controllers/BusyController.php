@@ -3,9 +3,9 @@
 namespace The3labsTeam\NovaBusyResourceField\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Carbon\Carbon;
 
 
 class BusyController extends Controller
@@ -17,8 +17,25 @@ class BusyController extends Controller
         $resource->busyFrom($user);
     }
 
+    protected function getResource(string $id, string $name)
+    {
+        $modelId = $id;
+        $modelName = '\App\Models\\'.Str::studly(Str::singular($name));
+
+        return $modelName::find($modelId);
+    }
+
     public function isBusy(Request $request)
     {
+        // If is a new resource, return false
+        if (! $request['model-id'] || ! $request['model-name']) {
+            return response()->json([
+                'success' => false,
+                'data' => null,
+                'lastUpdate' => null,
+            ]);
+        }
+
         $resource = $this->getResource($request['model-id'], $request['model-name']);
 
         return response()->json([
@@ -26,13 +43,5 @@ class BusyController extends Controller
             'data' => $resource->isBusy() ? $resource->busyData() : null,
             'lastUpdate' => $resource->isBusy() ? Carbon::parse($resource->busyData()['pivot']['updated_at'])->diffForHumans() : null,
         ]);
-    }
-
-    protected function getResource(string $id, string $name)
-    {
-        $modelId = $id;
-        $modelName = '\App\Models\\'.Str::studly(Str::singular($name));
-
-        return $modelName::find($modelId);
     }
 }
