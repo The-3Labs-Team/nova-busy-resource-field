@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'treasure-old' => 30, // in seconds
+    'threshold-old' => 30, // in seconds
 ];

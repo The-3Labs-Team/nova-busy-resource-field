@@ -26,6 +26,6 @@ class BusyCommand extends Command
      */
     public function handle()
     {
-        DB::table('busiables')->where('updated_at', '<', now()->subSeconds(config('nova-busy-resource-field.treasure-old'))->format('Y-m-d H:i:s'))->delete();
+        DB::table('busiables')->where('updated_at', '<', now()->subSeconds(config('nova-busy-resource-field.threshold-old'))->format('Y-m-d H:i:s'))->delete();
     }
 }
