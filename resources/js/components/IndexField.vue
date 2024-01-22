@@ -47,7 +47,7 @@ export default {
     methods: {
         async fetchData() {
             try {
-                const response = await fetch('http://tomshardware.test/api/busy-is-busy', {
+                const response = await fetch('/api/busy-is-busy', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
