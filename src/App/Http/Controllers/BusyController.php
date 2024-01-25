@@ -12,6 +12,10 @@ class BusyController extends Controller
 {
     public function storeBusy(Request $request)
     {
+        // If is a new resource, return false
+        if (! $request['model-id'] || ! $request['model-name']) {
+            return;
+        }
         $resource = $this->getResource($request['model-id'], $request['model-name']);
         $user = \App\Models\User::find($request['user-id']);
         $resource->busyFrom($user);
