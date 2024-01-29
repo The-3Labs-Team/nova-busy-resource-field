@@ -51,7 +51,8 @@ class FieldServiceProvider extends ServiceProvider
             return;
         }
 
-        Route::middleware(['nova'])
+        Route::middleware(['nova:api'])
+            ->prefix('nova-vendor/the-3labs-team/nova-busy-resource-field')
             ->group(__DIR__.'/../routes/api.php');
     }
 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use The3labsTeam\NovaBusyResourceField\App\Http\Controllers\BusyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/api/busy-is-busy', [\The3labsTeam\NovaBusyResourceField\App\Http\Controllers\BusyController::class, 'isBusy']);
-Route::post('/api/busy-store-busy', [\The3labsTeam\NovaBusyResourceField\App\Http\Controllers\BusyController::class, 'storeBusy']);
-Route::post('/api/busy-update-busy-date', [\The3labsTeam\NovaBusyResourceField\App\Http\Controllers\BusyController::class, 'updateBusyDate']);
+Route::post('/is-busy', [BusyController::class, 'isBusy']);
+Route::post('/store-busy', [BusyController::class, 'storeBusy']);
