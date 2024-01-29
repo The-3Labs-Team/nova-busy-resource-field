@@ -44,7 +44,7 @@ export default {
         async checkIfIsNotBusy() {
 
             try {
-                const response = await fetch('/api/busy-is-busy', {
+                const response = await fetch('/nova-vendor/the-3labs-team/nova-busy-resource-field/is-busy', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ export default {
 
         async storeAccess() {
 
-            const response = await fetch('/api/busy-store-busy', {
+            const response = await fetch('/nova-vendor/the-3labs-team/nova-busy-resource-field/store-busy', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -47,7 +47,7 @@ export default {
     methods: {
         async fetchData() {
             try {
-                const response = await fetch('/api/busy-is-busy', {
+                const response = await fetch('/nova-vendor/the-3labs-team/nova-busy-resource-field/is-busy', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
