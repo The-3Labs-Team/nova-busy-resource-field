@@ -84,7 +84,10 @@ export default {
         setTableRowBgColor(id) {
             const tableRow = document.querySelector(`[dusk="${id}-row"]`);
 
-            tableRow.style.backgroundColor = 'rgba(255, 0, 0, 0.03)';
+            tableRow.querySelectorAll('td').forEach((td) => {
+                td.classList.add('active-row');
+            });
+
             tableRow.classList.remove('group');
         }
 
