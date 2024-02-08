@@ -1,1 +1,10 @@
 /* Nova Field CSS */
+
+.active-row {
+    background-color: rgba(255, 0, 0, 0.03);
+}
+/*Dark mode*/
+html.dark .active-row {
+    background-color: rgba(255, 80, 80, 0.10);
+}
+
