@@ -42,6 +42,14 @@ class BusyController extends Controller
 
         $resource = $this->getResource($request['model-id'], $request['model-name']);
 
+        if(! $resource) {
+            return response()->json([
+                'success' => false,
+                'data' => null,
+                'lastUpdate' => null,
+            ]);
+        }
+
         return response()->json([
             'success' => $resource->isBusy(),
             'data' => $resource->isBusy() ? $resource->busyData() : null,
