@@ -5,6 +5,15 @@
 
 # Laravel Nova Busy Resource Field
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/the-3labs-team/nova-busy-resource-field.svg?style=flat-square)](https://packagist.org/packages/the-3labs-team/nova-busy-resource-field)
+<!--[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/the-3labs-team/laravel-googlenews-sitemap/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/the-3labs-team/laravel-googlenews-sitemap/actions?query=workflow%3Arun-tests+branch%3Amain)--!
+<!--[![Github PHPStan](https://img.shields.io/github/actions/workflow/status/the-3labs-team/laravel-googlenews-sitemap/phpstan.yml?branch=main&label=phpstan&style=flat-square)](https://github.com/the-3labs-team/laravel-googlenews-sitemap/actions?query=workflow%3Aphpstan+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/the-3labs-team/laravel-googlenews-sitemap/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/the-3labs-team/laravel-googlenews-sitemap/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)-->
+[![Maintainability](https://api.codeclimate.com/v1/badges/ce66e15115ca64d52c96/maintainability)](https://codeclimate.com/github/The-3Labs-Team/nova-busy-resource-field/maintainability)
+<!--[![Test Coverage](https://api.codeclimate.com/v1/badges/22028e79c4aa8a329bd5/test_coverage)](https://codeclimate.com/github/The-3Labs-Team/laravel-googlenews-sitemap/test_coverage)-->
+![License Mit](https://img.shields.io/github/license/murdercode/nova-busy-resource-field)
+[![Total Downloads](https://img.shields.io/packagist/dt/the-3labs-team/nova-busy-resource-field.svg?style=flat-square)](https://packagist.org/packages/the-3labs-team/nova-busy-resource-field)
+
 Have you ever dreamed of having a mechanism in Laravel Nova that would allow you to know if a resource is occupied by
 another user?
 
