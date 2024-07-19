@@ -6,7 +6,6 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 trait Busiable
-trait Busiable
 {
     // BUSY
 
@@ -40,7 +39,7 @@ trait Busiable
 
     public function isBusyByUser(User $user): bool
     {
-        return $this->busier()->where('id', $user->id)->exists();
+        return $this->busier()->where('user_id', $user->id)->exists();
     }
 
     public function scopeWhereBusy($query)
