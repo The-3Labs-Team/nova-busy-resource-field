@@ -37,6 +37,11 @@ trait Busiable
         return ! $this->isBusy();
     }
 
+    public function isBusyByUser(User $user): bool
+    {
+        return $this->busier()->where('user_id', $user->id)->exists();
+    }
+
     public function scopeWhereBusy($query)
     {
         return $query->whereHas('busier');

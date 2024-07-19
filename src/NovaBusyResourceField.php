@@ -3,6 +3,7 @@
 namespace The3labsTeam\NovaBusyResourceField;
 
 use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class NovaBusyResourceField extends Field
 {
@@ -12,4 +13,25 @@ class NovaBusyResourceField extends Field
      * @var string
      */
     public $component = 'nova-busy-resource-field';
+
+    /**
+     * Resolve the field's value.
+     *
+     * @param  mixed  $resource
+     * @param  string|null  $attribute
+     * @return void
+     */
+    public function resolve($resource, $attribute = null)
+    {
+        parent::resolve($resource, $attribute);
+
+        $user = auth()->user();
+        $isBusy = $resource->isBusy();
+        $isBusyByCurrentUser = $resource->isBusyByUser($user);
+
+        $this->withMeta([
+            'isBusy' => $isBusy,
+            'isBusyByCurrentUser' => $isBusyByCurrentUser,
+        ]);
+    }
 }
