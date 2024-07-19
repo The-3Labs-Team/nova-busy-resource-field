@@ -7,7 +7,6 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-
 class BusyController extends Controller
 {
     public function storeBusy(Request $request)
@@ -42,7 +41,7 @@ class BusyController extends Controller
 
         $resource = $this->getResource($request['model-id'], $request['model-name']);
 
-        if(! $resource) {
+        if (! $resource) {
             return response()->json([
                 'success' => false,
                 'data' => null,
