@@ -5,9 +5,9 @@
     <div class="absolute"
          style="top: 50%; right: 100%; transform: translateY(-50%); border-top: 10px solid transparent; border-right: 20px solid white; border-bottom: 10px solid transparent;"></div>
     <p class="relative z-2">
-      <span class="text-base">Occupied by <span class="font-bold">{{ fieldData.name }}</span></span>
+      <span class="text-base">{{ $t('Occupied by') }} <span class="font-bold">{{ fieldData.name }}</span></span>
       <br>
-      <span class="text-xs tracking-wide">Last activity: {{ lastUpdate }}</span>
+      <span class="text-xs tracking-wide">{{ $t('Last activity') }}: {{ lastUpdate }}</span>
     </p>
   </div>
 

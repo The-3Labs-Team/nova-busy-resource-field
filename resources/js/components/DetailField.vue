@@ -14,7 +14,7 @@
           stroke-linecap="round" stroke-linejoin="round"
           style="color: #b5b5b5;"/>
     </svg>
-    <span class="ml-2">{{ field.isBusy ? (field.isBusyByCurrentUser ? 'Busy (You)' : 'Busy') : 'Free' }}</span>
+    <span class="ml-2">{{ field.isBusy ? (field.isBusyByCurrentUser ? $t('Busy (You)') : $t('Busy')) : $t('Free') }}</span>
   </div>
 </template>
 

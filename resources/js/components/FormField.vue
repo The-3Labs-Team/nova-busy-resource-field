@@ -63,7 +63,7 @@ export default {
           if (responseData.data.pivot.user_id === this.$page.props.currentUser.id) {
             return true;
           }
-          return confirm('This resource is busy, do you want to proceed?')
+          return confirm(this.$t('This resource is busy, do you want to proceed?'))
         }
 
         return true;
