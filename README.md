@@ -7,7 +7,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/the-3labs-team/nova-busy-resource-field.svg?style=flat-square)](https://packagist.org/packages/the-3labs-team/nova-busy-resource-field)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ce66e15115ca64d52c96/maintainability)](https://codeclimate.com/github/The-3Labs-Team/nova-busy-resource-field/maintainability)
-![License Mit](https://img.shields.io/github/license/murdercode/nova-busy-resource-field)
 [![Total Downloads](https://img.shields.io/packagist/dt/the-3labs-team/nova-busy-resource-field.svg?style=flat-square)](https://packagist.org/packages/the-3labs-team/nova-busy-resource-field)
 
 Have you ever dreamed of having a mechanism in Laravel Nova that would allow you to know if a resource is occupied by
