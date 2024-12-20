@@ -1,0 +1,5 @@
+{
+    "novaBusyResource.occupiedBy": "被占用",
+    "novaBusyResource.lastActivity": "最后活动",
+    "novaBusyResource.confirmProceed": "此资源正忙，您要继续吗？"
+}

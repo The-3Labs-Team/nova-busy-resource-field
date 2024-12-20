@@ -1,13 +1,13 @@
 <template>
   <div v-if="fieldData" :class="'details-box-'+fieldData.pivot.busiable_id"
-       class="absolute bg-white p-4 rounded-lg shadow-lg hidden"
+       class="absolute hidden p-4 bg-white rounded-lg shadow-lg"
        style="transform: translate(40px, -25px); z-index: 5;">
     <div class="absolute"
          style="top: 50%; right: 100%; transform: translateY(-50%); border-top: 10px solid transparent; border-right: 20px solid white; border-bottom: 10px solid transparent;"></div>
     <p class="relative z-2">
-      <span class="text-base">Occupied by <span class="font-bold">{{ fieldData.name }}</span></span>
+      <span class="text-base">{{ __('novaBusyResource.occupiedBy') }} <span class="font-bold">{{ fieldData.name }}</span></span>
       <br>
-      <span class="text-xs tracking-wide">Last activity: {{ lastUpdate }}</span>
+      <span class="text-xs tracking-wide">{{ __('novaBusyResource.lastActivity') }}: {{ lastUpdate }}</span>
     </p>
   </div>
 

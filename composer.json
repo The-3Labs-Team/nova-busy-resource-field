@@ -7,7 +7,15 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3|^8.0",
+        "laravel/nova": "^5.0",
+        "outl1ne/nova-translations-loader": "^5.0"
+    },
+    "require-dev": {
+        "laravel/nova-devtool": "^1.0",
+        "nunomaduro/collision": "^7.8",
+        "orchestra/testbench": "^8.30|^9.8",
+        "laravel/pint": "^1.16"
     },
     "autoload": {
         "psr-4": {
@@ -26,7 +34,10 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "require-dev": {
-        "laravel/pint": "^1.16"
-    }
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ]
 }

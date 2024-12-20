@@ -1,0 +1,5 @@
+{
+    "novaBusyResource.occupiedBy": "占有者",
+    "novaBusyResource.lastActivity": "最終活動",
+    "novaBusyResource.confirmProceed": "このリソースは使用中です。続行しますか？"
+}
