@@ -1,0 +1,5 @@
+{
+    "novaBusyResource.occupiedBy": "Занято",
+    "novaBusyResource.lastActivity": "Последняя активность",
+    "novaBusyResource.confirmProceed": "Этот ресурс занят, вы хотите продолжить?"
+}
