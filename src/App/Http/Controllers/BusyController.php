@@ -16,7 +16,7 @@ class BusyController extends Controller
             return;
         }
         $resource = $this->getResource($request['model-id'], $request['model-name']);
-        //check if the $resource has a busyFrom method, if not, return
+        // check if the $resource has a busyFrom method, if not, return
         if (! method_exists($resource, 'busyFrom')) {
             return;
         }

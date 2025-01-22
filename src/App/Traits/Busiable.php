@@ -52,7 +52,7 @@ trait Busiable
         return $query->whereDoesntHave('busier');
     }
 
-    //=== RELATIONSHIPS ===//
+    // === RELATIONSHIPS ===//
     public function busier(): MorphToMany
     {
         return $this->morphToMany(User::class, 'busiable')->withPivot('created_at', 'updated_at');
