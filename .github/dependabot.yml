@@ -1,0 +1,28 @@
+version: 2
+
+registries:
+  nova-composer:
+    type: composer-repository
+    url: https://nova.laravel.com
+    username: ${{secrets.NOVA_USERNAME}}
+    password: ${{secrets.NOVA_LICENSE_KEY}}
+
+updates:
+  - package-ecosystem: "composer"
+    directory: "/"
+    registries: "*"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10

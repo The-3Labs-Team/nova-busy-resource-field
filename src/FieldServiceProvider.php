@@ -47,7 +47,7 @@ class FieldServiceProvider extends ServiceProvider
             Nova::style('nova-busy-resource-field', __DIR__.'/../dist/css/field.css');
         });
 
-        $this->loadTranslations(__DIR__.'/../resources/lang', 'nova-multiselect-field', true);
+        $this->loadTranslations(__DIR__.'/../resources/lang', 'nova-busy-resource-field', true);
     }
 
     protected function routes()
@@ -68,6 +68,9 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/nova-busy-resource-field.php',
+            'nova-busy-resource-field'
+        );
     }
 }
