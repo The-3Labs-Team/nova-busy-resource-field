@@ -1,0 +1,18 @@
+name: dependabot-pr-cleanup
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder
+        run: |
+          echo "Refresh stale PRs with @dependabot rebase or @dependabot recreate."
+          echo "If a non-major dependency PR still fails after one refresh and stable CI, close it with a reason comment."

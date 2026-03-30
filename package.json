@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "build": "npm run production",
     "dev": "npm run development",
     "development": "mix",
     "watch": "mix watch",
@@ -8,7 +9,7 @@
     "hot": "mix watch --hot",
     "prod": "npm run production",
     "production": "mix --production",
-    "nova:install": "npm --prefix='../../vendor/laravel/nova' ci"
+    "nova:install": "node scripts/install-nova-deps.js"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.2.22",

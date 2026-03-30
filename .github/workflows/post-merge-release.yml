@@ -1,0 +1,44 @@
+name: post-merge-release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          coverage: none
+
+      - name: Require Nova Composer credentials
+        env:
+          NOVA_USERNAME: ${{ secrets.NOVA_USERNAME }}
+          NOVA_LICENSE_KEY: ${{ secrets.NOVA_LICENSE_KEY }}
+        run: |
+          if [ -z "${NOVA_USERNAME}" ] || [ -z "${NOVA_LICENSE_KEY}" ]; then
+            echo "::error::Missing Actions secrets NOVA_USERNAME and/or NOVA_LICENSE_KEY. Configure your Nova account email and license key before running release verification."
+            exit 1
+          fi
+
+      - name: Configure Nova Composer auth
+        env:
+          NOVA_USERNAME: ${{ secrets.NOVA_USERNAME }}
+          NOVA_LICENSE_KEY: ${{ secrets.NOVA_LICENSE_KEY }}
+        run: composer config http-basic.nova.laravel.com "${NOVA_USERNAME}" "${NOVA_LICENSE_KEY}"
+
+      - name: Install dependencies
+        run: composer update --prefer-dist --no-interaction
+
+      - name: Run release checks
+        run: composer test
