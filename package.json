@@ -12,7 +12,7 @@
     "nova:install": "node scripts/install-nova-deps.js"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.5.32",
+    "@vue/compiler-sfc": "^3.5.33",
     "form-backend-validation": "^2.3.3",
     "laravel-mix": "^6.0.41",
     "lodash": "^4.18.1",
